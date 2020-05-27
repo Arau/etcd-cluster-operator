@@ -12,6 +12,9 @@ spec:
         requests:
           storage: 1Mi
   podTemplate:
+    env:
+    - name: ETCD_QUOTA_BACKEND_BYTES
+      value: "8589934592"
     resources:
       requests:
         cpu: 200m
